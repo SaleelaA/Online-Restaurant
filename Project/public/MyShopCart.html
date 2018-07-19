@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/angular-resource.js"></script>
+    <script src="javascripts/angular-route.min.js"></script>
+   
+    <script src="javascripts/MyShopCart.js"></script>
+    <style>
+        body {
+            background-image: url('images/bokeh-cute-food-photography-vintage-yummy-Favim.com-106696.jpg');
+        }
+        div{
+            text-align:center;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+
+    <div ng-app="my">
+        <div ng-controller="mySho">
+
+            <div ng-repeat="object in starterObj">
+                <p> NAME {{object.name}}</p>
+                <p>
+                    Price
+                    {{object.price}}
+                </p>
+                Description<p>{{object.description}}</p>
+                FoodId<p>{{object.foodId}}</p>
+
+                <p>quantity:<input type="text" ng-model="object.quan" />  </p>
+                <p>Comments:<input type="text" ng-model="object.com" />  </p>
+                <p><input type="button" value="addToCart" ng-click="addToCart(object)" />  </p>
+
+            </div>
+            <table border="1">
+
+                <tr ng-repeat="object in starterObj">
+                    <td>
+                    {{object.name}}
+                    </td>
+                    <td>
+                        {{object.price}}
+                    </td>
+                    <td>
+                        {{object.description}}
+                    </td>
+                    <td>quantity:<input type="text" ng-model="object1.quan" /> </td>
+                    <td>Comments:<input type="text" ng-model="object1.com" /> </td>
+                    <td><input type="button" value="AddToCart" ng-click="addToCart(object)" /> </td>
+                </tr>
+            </table>
+
+
+            <h3>appetizer</h3>
+            <table border="1">
+
+                <tr ng-repeat="object1 in appetizersObj">
+                    <td>{{object1.name}}</td>
+                    <td>
+                        {{object1.price}}
+                    </td>
+                    <td>{{object1.description}}</td>
+                    <td>quantity:<input type="text" ng-model="object1.quan" /> </td>
+                    <td>Comments:<input type="text" ng-model="object1.com" /> </td>
+                    <td><input type="button" value="AddToCart" ng-click="addToCart(object1)" /> </td>
+                </tr>
+            </table>
+            <h3>dessert</h3>
+            <table border="1">
+
+                <tr ng-repeat="object2 in dessertObj">
+                    <td>{{object2.name}}</td>
+                    <td>
+                        {{object2.price}}
+                    </td>
+                    <td>{{object2.description}}</td>
+                    <td>quantity:<input type="text" ng-model="object2.quan" /> </td>
+                    <td>Comments:<input type="text" ng-model="object2.com" /> </td>
+                    <td><input type="button" value="AddToCart" ng-click="addToCart(object2)" /> </td>
+            </table>
+
+            <button ng-click="check()">checkout</button>
+
+        </div>
+    </div>
+
+
+   
+
+</body>
+</html>

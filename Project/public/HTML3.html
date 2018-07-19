@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title> Indigo</title>
+
+    <link href="stylesheets/HOME.css" rel="stylesheet" />
+</head>
+
+<body background="images\373038.jpg">
+    <br />
+    <header class="container">
+
+        <img src="images/header1.jpg" height="93" width="150" />
+
+    </header>
+    <br /><br />
+    <header class="container2">
+        <div class="heading" style="margin-left:50px; font-size:40px; font-family: 'Sancreek';" align="center"></div>
+
+        <ul class="options">
+            <a href="MenuDisplay.html"><li class="home">Menu</li></a>
+            <a href="Login.html"><li class="home">Register</li></a>
+            <a href="MyShopCart.html"><li class="home">Order Online</li></a>
+            <a href="Register.html"><li class="home">Login</li></a>
+            <a href="#"><li class="ab">About us</li></a>
+
+
+        </ul>
+        <br /><br />
+        <div class="fadein" align="center">
+            <img src="images/culinary-credibility-101916-hhd.jpg" width="1100" height="700" />
+            <img src="images/e14311631fd657f9e178052dbc72fe41.jpg" width="1100" height="700" />
+
+            <img src="images/4354_spaghetti-1024x576.jpg" width="1100" height="700" />
+            <img src="images/pexels-photo-126371.jpeg" width="1100" height="700" />
+            <img src="images/007-CH9A4227.jpg" width="1100" height="700" />
+            <img src="images/zucca chips.jpg" width="1100" height="700" />
+
+
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+        $(function () {
+            $('.fadein img:gt(0)').hide();
+
+            setInterval(function () {
+                $('.fadein :first-child').fadeOut()
+                                         .next('img')
+                                         .fadeIn()
+                                         .end()
+                                         .appendTo('.fadein');
+            }, 4000); // 4 seconds
+        });
+        </script>
+    </header>
+
+
+
+    <footer class="container4">
+        <div class="social">
+            <span class="like">Like us on</span>
+            <span class="fb"><a href="https://www.facebook.com/" target="_blank"><img src="images/twitter.png" style='width:30px;' /></a></span>
+            <span class="tw"><a href="https://twitter.com/?lang=en" target="_blank"><img src="images/fb.png" style='width:30px;' a></span>
+        </div>
+
+    </footer>
+
+</body>
+</html>

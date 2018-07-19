@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="javascripts/angular.min.js"></script>
+    <script src="javascripts/angular-resource.min.js"></script>
+    <script src="javascripts/angular-route.min.js"></script>
+    </head>
+    <body ng-app="myCart">
+
+    <form ng-controller="cart" ng-submit="submit()">
+        <table id="cart">
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Notes</th>
+            </tr>
+            <tr ng-repeat="item in items">
+                <td>{{item.description}}<input type="hidden" ng-model="item.id" /></td>
+                <td><input type="text" ng-model="item.quantity" /></td>
+                <td>{{item.price}}</td>
+                <td><input type="button" onclick="addToCart(items, 1)" value="Add item " /></td>
+                <td><textarea ng-model="item.notes"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="submit" value="Checkout" />
+                </td>
+            </tr>
+        </table>
+    </form>
+        
+    <input type="button" onclick="addToCart(items[0], 1)" value="Add item #1" />
+    <input type="button" onclick="addToCart(items[1], 1)" value="Add item #2" />
+        <input type="button" onclick="addToCart(items[2], 1)" value="Add item #3" />
+        <script>
+            
+            var app=   angular.module("myCart",["ngResource"]);
+                app.controller(
+      "cart", function ($scope, $http) {
+          $scope.items = [];
+          $scope.submit = function () {
+              var items = [];
+              for (var i = 0; i < $scope.items.length; i++) {
+                  var item = $scope.items[i];
+                  items.push(
+                      {
+                          id: item.id,
+                          quantity: item.quantity,
+                          notes: item.notes
+                      }
+                  );
+              }
+              $http.post("/users/cart", { items: items, payment: paymentInfo });
+              $http.then(function (response) {
+                  var data = response.data;
+                  alert(data);
+              });
+          }
+      }
+      )
+                function getCartScope() {
+                    var $scope = angular.element(document.getElementById("cart")).scope();
+                    return $scope;
+                }
+
+                function addToCart(item, quantity) {
+                    var $scope = getCartScope();
+                    var scopeItem = {};
+                    scopeItem.description = item.description;
+                    scopeItem.name = item.name;
+                    if (quantity > 0) {
+                        scopeItem.quantity = quantity;
+                    }
+                    else {
+                        scopeItem.quantity = 1;
+                    }
+                    scopeItem.price = "$" + (Math.round(item.price * scopeItem.quantity * 100) / 100);
+                    scopeItem.notes = "";
+                    $scope.items.push(scopeItem);
+                    $scope.$apply();
+                }
+
+                function changeQuantity(itemId, quantity) {
+                    var $scope = getCartScope();
+                }
+
+                function removeItem(itemId) {
+                    var $scope = angular.element(document.getElementById("cart")).scope();
+                }
+
+                var items = [
+                    {
+                        name: "Cake",
+                        id: 1,
+                        price: 1,
+                        image: "Italian_meatballs.jpg",
+                        description: "Fattening food"
+                    },
+                    {
+                        name: "Pizza",
+                        id: 2,
+                        price: 10,
+                        image: "Italian_meatballs.jpg",
+                        description: "Junk food"
+                    },
+                {
+                    name: "Cake",
+                    id: 1,
+                price: 1,
+                image: "Italian_meatballs.jpg",
+                description: "Fattening food"
+                }
+                ];
+
+
+ </script>
+</body>
+
+</html>

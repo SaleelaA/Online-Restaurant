@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="javascripts/angular.min.js"></script>
+    <script src="javascripts/angular-resource.min.js"></script>
+    <script src="javascripts/ADMINangular.js"></script>
+   
+</head>
+
+<body ng-app="myModule">
+    <a href="Login.html"><b>NOT A MEMBER YET,YOU CAN SIGN UP HERE</b></a>
+
+    <div ng-controller="AdminController">
+        <form novalidate class="simple-form" ng-submit="adminUser()">
+            <table>
+                <tr>
+                    <td colspan="2"><h2><b>LOGIN HERE !!</b></h2></td>
+                </tr>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><label><input type="text" ng-model="name" /></label></td>
+                </tr>
+                <tr>
+                    <td><b>Password</b></td>
+                    <td><label><input type="password" ng-model="password" /></label></td>
+                </tr>
+            </table>
+            <input type="submit" value="login" class="yay" />
+            {{error}}
+
+        </form>
+    
+
+</body>
+</html>

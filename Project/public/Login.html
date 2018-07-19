@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="javascripts/angular.min.js"></script>
+    <script src="javascripts/angular-resource.min.js"></script>
+    <script src="javascripts/UsersAngularr.js"></script>
+    <style>
+        
+    form {
+    display: inline-block;
+    text-align: center;
+    }
+
+       
+input{
+    display:block;
+    margin-bottom:20px;
+    text-align:center;
+
+    }
+        body {
+            background-color: rosybrown;
+            background-image: url('images/Cafe-Wallpaper.jpg');
+        }
+    input.ng-invalid{
+        border:2px solid red;
+    }
+    input[disabled="disabled"]{
+        cursor:not-allowed !important;
+    }
+    p a {
+    font-size: 11px;
+    color: #aaa;
+    float: right;
+    margin-top: -13px;
+    margin-right: 20px;
+}
+p a:hover {
+    color: olive;
+}
+input {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+input[type=text],input[type=email],
+input[type=password] {
+    color: #777;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 290px;
+    height: 35px;
+}
+form    { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color:royalblue;
+          padding-left:inherit;
+          font-size:large;
+          float:left;
+
+    }
+.s{
+    font-weight:bold;
+    color:red;
+}
+    </style>
+</head>
+
+
+<body ng-app="application">
+    
+    <form name="myForm" novalidate ng-controller="AddUserController" ng-submit="addUser()"><br />
+        <div ng-show="myForm.Contact.$touched  && myForm.Contact.$invalid">
+            <small style="color:red;display:block;text-align:left">Enter valid name</small>
+        </div>
+
+        
+        <div ng-show="myForm.emailid.$touched  && myForm.emailid.$invalid">
+            <small style="color:red;display:block;text-align:left">Enter valid email</small>
+        </div><br />
+    <table>
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <label>   <input type="text" name="Contact" ng-model="name" ng-required="true" /></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                E-mail
+            </td>
+            <td>
+                <label>     <input type="email" ng-model="emailid" name="emailid" ng-required="true" /><br /></label>
+            </td>
+        </tr>
+        <tr>
+            <td> City:</td>
+            <td><input type="text" ng-model="city" required /><br /></td>
+        </tr>
+        <tr>
+            <td>
+                Phone:
+            </td>
+            <td>
+                <input type="text" ng-model="phone" required /><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <label><input type="password" name=password ng-model="password" ng-minlength="3" ng-maxlength="8" ng-required="true" /><br /></label></td>
+        </tr>
+    </table>
+    
+        
+
+          
+       
+         
+       
+        <div role="alert">
+            <span class="error" ng-show="myForm.password.$error.minlength">
+                Too short!
+            </span>
+            <span class="error" ng-show="myForm.password.$error.maxlength">
+                Too long!
+            </span>
+         
+        </div>
+       
+        <input type="submit" value="Register" ng-disabled="myForm.$invalid" />
+                        <p class="s" > {{message}}</p>
+    </form>
+  
+</body>
+<p>NOT A MEMBER YET,YOU CAN SIGN UP HERE</p>
+</html>

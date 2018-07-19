@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Project</Name>
+    <RootNamespace>Project</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d59f9b09-72b4-4945-86c4-9e2676c1d16d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>bin\www</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="public\javascripts\ADMINangular.js" />
+    <Compile Include="public\javascripts\angular-resource.js" />
+    <Compile Include="public\javascripts\angular-resource.min.js" />
+    <Compile Include="public\javascripts\angular-route.js" />
+    <Compile Include="public\javascripts\angular-route.min.js" />
+    <Compile Include="public\javascripts\angular-ui-router.js" />
+    <Compile Include="public\javascripts\angular.js" />
+    <Compile Include="public\javascripts\angular.min.js" />
+    <Compile Include="public\javascripts\INDEX.js" />
+    <Compile Include="public\javascripts\MyShopCart.js" />
+    <Compile Include="public\javascripts\Menuangular.js" />
+    <Compile Include="public\javascripts\config.js" />
+    <Compile Include="public\javascripts\UsersAngularr.js" />
+    <Compile Include="routes\ADMIN.js" />
+    <Compile Include="routes\appetizers.js" />
+    <Compile Include="routes\cart.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\menu.js" />
+    <Compile Include="routes\starter.js" />
+    <Compile Include="routes\users.js" />
+    <Compile Include="bin\www" />
+    <Content Include="data\JSON.json" />
+    <Content Include="data\menu.json" />
+    <Content Include="data\order.json" />
+    <Content Include="data\users.json" />
+    <Content Include="package.json" />
+    <Content Include="public\cart.html" />
+    <Content Include="public\HTML1.html" />
+    <Content Include="public\HTML2.html" />
+    <Content Include="public\HTML3.html" />
+    <Content Include="public\images\007-CH9A4227.jpg" />
+    <Content Include="public\images\373038.jpg" />
+    <Content Include="public\images\4354_spaghetti-1024x576.jpg" />
+    <Content Include="public\images\68841777-pasta-wallpapers.jpg" />
+    <Content Include="public\images\952d40bfd397ac59a10a493c4361da18.jpg" />
+    <Content Include="public\images\abstract-blue-background-1024x768.jpg" />
+    <Content Include="public\images\AE5A4761-pavlova-dark-food-photography-738x492.jpg" />
+    <Content Include="public\images\Affogato1.jpg" />
+    <Content Include="public\images\arancini-ftr.jpg" />
+    <Content Include="public\images\black Mediterranean mussels.jpg" />
+    <Content Include="public\images\bokeh-cute-food-photography-vintage-yummy-Favim.com-106696.jpg" />
+    <Content Include="public\images\bolognese.jpg" />
+    <Content Include="public\images\bombolini.jpg" />
+    <Content Include="public\images\burrata_tortelloni.jpg" />
+    <Content Include="public\images\Cafe-Wallpaper.jpg" />
+    <Content Include="public\images\candle-light-dinner-at-home-decoration-candle-light-dinner-best-decoration-idea-with-heart-on-valentine-day.jpg" />
+    <Content Include="public\images\Chicken_pesto_pasta.jpg" />
+    <Content Include="public\images\crispy-fried-calamari-01.jpg" />
+    <Content Include="public\images\ctx-header-food01.jpg" />
+    <Content Include="public\images\culinary-credibility-101916-hhd.jpg" />
+    <Content Include="public\images\dark-old-wood-texture-background-header.jpg" />
+    <Content Include="public\images\diver_scallops.jpg" />
+    <Content Include="public\images\e14311631fd657f9e178052dbc72fe41.jpg" />
+    <Content Include="public\images\fb.png" />
+    <Content Include="public\images\FirstPage.html" />
+    <Content Include="public\images\fish and chips.jpg" />
+    <Content Include="public\images\foodiesfeed.com_amazing-colorful-italian-cuisine-ingredients_low.jpg" />
+    <Content Include="public\images\free-glitter-wallpaper-12.jpg" />
+    <Content Include="public\images\Green-Beautiful-Vegetables-Desktop-HD-Wallpapers_1.jpg" />
+    <Content Include="public\images\grilled cauliflower.jpg" />
+    <Content Include="public\images\grilled-artichoke.jpg" />
+    <Content Include="public\images\grilled-branzino.jpg" />
+    <Content Include="public\images\grungy-faded-flower-background-decorative-paper-54516562.jpg" />
+    <Content Include="public\images\hazelnut torta.jpg" />
+    <Content Include="public\images\header1.jpg" />
+    <Content Include="public\images\healthy-eating-background-food-photography-different-fruits-vegetables-isolated-white-copy-space-high-resolution-68279520.jpg" />
+    <Content Include="public\images\InsaOverheadFood_A_Flat_Faded.jpg" />
+    <Content Include="public\images\italian-foods-website-header-image.jpg" />
+    <Content Include="public\images\italian-grinder.jpg" />
+    <Content Include="public\images\Italian_meatballs.jpg" />
+    <Content Include="public\images\pexels-photo-126371.jpeg" />
+    <Content Include="public\images\roasted_salmon.jpg" />
+    <Content Include="public\images\rosemary_chicken.jpeg" />
+    <Content Include="public\images\rustic_christmas_table_decorations_background-t2.jpg" />
+    <Content Include="public\images\Salted-Caramel-Budino-04.jpg" />
+    <Content Include="public\images\short_rib_radiatori.jpg" />
+    <Content Include="public\images\Spaghetti-and-Meatballs-Recipe-11.jpg" />
+    <Content Include="public\images\still-life-379858_1280.jpg" />
+    <Content Include="public\images\tiramisu.jpg" />
+    <Content Include="public\images\tiramisu1.jpg" />
+    <Content Include="public\images\twitter.png" />
+    <Content Include="public\images\white truffle garlic bread.jpg" />
+    <Content Include="public\images\zucca chips.jpg" />
+    <Content Include="public\images\download.jpg" />
+    <Content Include="public\Login.html" />
+    <Content Include="public\MainPage.html" />
+    <Content Include="public\MyShopCart.html" />
+    <Content Include="public\Register.html" />
+    <Content Include="public\MenuDisplay.html" />
+    <Content Include="public\ShoppingCart.html" />
+    <Content Include="public\stylesheets\HOME.css" />
+    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="public\stylesheets\Stylesheet1.css" />
+    <Content Include="public\User.html" />
+    <Content Include="README.md" />
+    <Content Include="typings.json" />
+    <Content Include="views\index.jade" />
+    <Content Include="views\layout.jade" />
+    <Content Include="views\error.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="data\" />
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\body-parser\" />
+    <Folder Include="typings\globals\cookie-parser\" />
+    <Folder Include="typings\globals\debug\" />
+    <Folder Include="typings\globals\express-serve-static-core\" />
+    <Folder Include="typings\globals\express-session\" />
+    <Folder Include="typings\globals\express\" />
+    <Folder Include="typings\globals\jade\" />
+    <Folder Include="typings\globals\mime\" />
+    <Folder Include="typings\globals\morgan\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\globals\serve-favicon\" />
+    <Folder Include="typings\globals\serve-static\" />
+    <Folder Include="typings\globals\stylus\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\body-parser\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\cookie-parser\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\debug\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\express-serve-static-core\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\express-session\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mime\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\morgan\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\serve-favicon\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\serve-static\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\stylus\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

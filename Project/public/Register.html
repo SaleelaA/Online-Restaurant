@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+  
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/angular-resource.js"></script>
+    <script src="javascripts/angular-route.js"></script>
+    <script src="javascripts/angular-ui-router.js"></script>
+
+    <script src="javascripts/UsersAngularr.js"></script>
+    <link href="stylesheets/Stylesheet1.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('images/InsaOverheadFood_A_Flat_Faded.jpg');
+        }
+
+            
+    .yay{
+        font-weight:bold;
+        color:black;
+        font-size:100px;
+    }
+        }
+        a{
+            font-weight:bold;
+            color:crimson
+
+        }
+
+        
+        p a {
+    font-size: 11px;
+    color: #aaa;
+    float: right;
+    margin-top: -13px;
+    margin-right: 20px;
+}
+p a:hover {
+    color: #555;
+}
+input {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+        input[type=text],
+        input[type=password] {
+            color: #777;
+            padding-left: 10px;
+            margin: 10px;
+            margin-top: 12px;
+            margin-left: 18px;
+            width: 290px;
+            height: 35px;
+        }
+      
+    </style>
+</head>
+
+<body ng-app="application">
+    <a href="Login.html"><b>NOT A MEMBER YET,YOU CAN SIGN UP HERE</b></a>
+   
+    <div ng-controller="LoginController">
+        <form novalidate class="simple-form" ng-submit="authUser()" >
+            <table>
+                <tr>
+                    <td colspan="2"><h2><b>LOGIN HERE !!</b></h2></td>
+                </tr>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><label><input type="text" ng-model="name" /></label></td>
+                </tr>
+                <tr>
+                    <td><b>Password</b></td>
+                    <td><label><input type="password" ng-model="password" /></label></td>
+                </tr>
+            </table>
+            
+            
+         
+                       
+            <input type="submit" value="login" class="yay"/>
+          {{error}}
+
+        </form>
+    </div>
+    <div ng-controller="LogOut">
+    <input type="button" value="logout" ng-click="logOut()" />
+        </div>
+
+</body>
+</html>
